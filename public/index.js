@@ -1,5 +1,12 @@
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+};
+
 let transactions = [];
 let myChart;
+
+
+// https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
 
 fetch("/api/transaction")
   .then(response => {
