@@ -45,6 +45,7 @@ self.addEventListener("activate", function (evt) {
 self.addEventListener("fetch", function (evt) {
   // cache successful requests to the API
   if (evt.request.url.includes("/api/")) {
+    console.log(evt.request.url);
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
         return fetch(evt.request)
@@ -74,3 +75,39 @@ self.addEventListener("fetch", function (evt) {
     })
   );
 });
+
+
+// // Inside of webpack.config.js:
+// const WorkboxPlugin = require('workbox-webpack-plugin');
+
+// module.exports = {
+//   // Other webpack config...
+
+//   plugins: [
+//     // Other plugins...
+
+//     new WorkboxPlugin.GenerateSW({
+//       // Do not precache images
+//       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+//       // Define runtime caching rules.
+//       runtimeCaching: [{
+//         // Match any request that ends with .png, .jpg, .jpeg or .svg.
+//         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+//         // Apply a cache-first strategy.
+//         handler: 'CacheFirst',
+
+//         options: {
+//           // Use a custom cache name.
+//           cacheName: 'images',
+
+//           // Only cache 10 images.
+//           expiration: {
+//             maxEntries: 10,
+//           },
+//         },
+//       }],
+//     })
+//   ]
+// };
