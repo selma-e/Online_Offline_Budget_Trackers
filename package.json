@@ -4,8 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack --watch",
-    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "lite-server": "lite-server"
@@ -26,9 +24,6 @@
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1",
-    "mysql": "^2.18.1",
-    "webpack": "^5.16.0",
-    "webpack-bundle-analyzer": "^4.3.0",
-    "webpack-cli": "^4.4.0"
+    "mysql": "^2.18.1"
   }
 }
