@@ -9,8 +9,9 @@ In this activity we are building a budget tracker that can track deposits and wi
 - Service workers
 - Cache
 - Index DB
-- How to connect a Mongo DB to Heroku
-- Web manifest
+- How to connect Mongo DB to Heroku
+- Web
+- Non-sql databases
 
 ## Installation:
 
@@ -19,7 +20,7 @@ In this activity we are building a budget tracker that can track deposits and wi
 
 ## Usage:
 
-<img src="./Assets/screenshot1.png" alt="image of password generator program">
+<img src="./public/Assets/screenshot1.png">
 
 ## Resources Used/Credits:
 
